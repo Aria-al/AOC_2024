@@ -1,0 +1,1 @@
+from Day06Partie1 import *
