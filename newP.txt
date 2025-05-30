@@ -1,15 +1,12 @@
-Repo pour l'Advent of Code 2024
-
-Jours complétés : 
-- [X] Jour 1
-- [X] Jour 2
+- [ ] Jour 1
+- [ ] Jour 2
 - [ ] Jour 3
-- [X] Jour 4
+- [ ] Jour 4
 - [ ] Jour 5
 - [ ] Jour 6
-- [X] Jour 7
-- [X] Jour 8
-- [X] Jour 9
+- [ ] Jour 7
+- [ ] Jour 8
+- [ ] Jour 9
 - [ ] Jour 10
 - [ ] Jour 11
 - [ ] Jour 12
