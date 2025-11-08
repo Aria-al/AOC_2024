@@ -23,3 +23,37 @@
 - [ ] Jour 23
 - [ ] Jour 24
 - [ ] Jour 25
+Pour le jour 16, employer un graphe qui est défini ainsi : 
+- Toute case passable du labyrithe est traduite en n sommets avec n dans [1, 4] le nombre de manières de rentrer dans la case 
+Par exemple 
+#.#
+#.#
+###
+Aurait un seul sommet correspondant, qui indique que l'on ne peut arriver à la case centrale d'une seule manière, du nord. 
+Alors que :
+#.#
+...
+#.#
+Aurait 4 sommets, pour l'arrivée par le nord, sud, est et ouest. 
+De manière équivalent, c'est les faces du carré de la case qui ne sont pas adjacent à une case impassable 
+- Pour toute paire de sommets donc les cotés des cases correspondantes sont adjacentes, on peut établir une arête de coût 1 : 
+S1#.#
+S2#.#
+Dans ce cas, l'arête {S1_sud, S2_nord} existe et à un poids de 1. 
+Entre chaque paire de sommets qui représent des cotés adjacents d'une même case, on établit une arête de coût 1000 : 
+S1    #.#
+S2, S3..#
+      ###
+Dans cet exemple, S3 possède 2 sommets : S3_nord et S3_ouest, on aurait donc l'arête {S3_nord, S3_ouest} de coût 1000
+Et entre chaque paire de sommets qui représentent des cotés opposés d'une même case, on établit une arête de coût 0 (on ne change pas d'orientation si on continue dans la 
+même direction) : 
+S1#.#
+S2#.#
+S3#.#
+Dans cet exemple, S2 possède 2 sommets : S2_nord et S2_sud, on aurait donc l'arête {S2_nord, S2_sud} de coût nulle
+
+On obtient donc un graphe modélisant correctement le problème, il suffit donc maintenant d'appliquer un algorithme pouvant trouver 
+le plus court chemin dans un graphe non orienté avec arêtes de coût positif, où de manière équivalente un graphe avec circuit avec des 
+arêtes de coût positif, en posant que pour tout arête de G = (V, E), on a deux arcs de même coût allant dans les deux sens. 
+Des exemples d'algorithmes seraient A*, mais ceci prendrait en compte la difficulté de calculer l'approximation dû à l'abstraction 
+vers des graphes, ou l'algorithme de Dijkstra. 
