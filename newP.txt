@@ -57,3 +57,5 @@ le plus court chemin dans un graphe non orienté avec arêtes de coût positif, 
 arêtes de coût positif, en posant que pour tout arête de G = (V, E), on a deux arcs de même coût allant dans les deux sens. 
 Des exemples d'algorithmes seraient A*, mais ceci prendrait en compte la difficulté de calculer l'approximation dû à l'abstraction 
 vers des graphes, ou l'algorithme de Dijkstra. 
+La solution sera donnée par le plus court chemin allant de l'origine, qui est l'orientation du renne sur la case de départ à l'un des 
+4 sommets représentant la case d'arrivée. 
